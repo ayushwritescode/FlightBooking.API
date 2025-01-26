@@ -1,0 +1,110 @@
+{
+	"info": {
+		"_postman_id": "a72df4bb-1713-45c7-9eed-1cc1b2c04df0",
+		"name": "Interview",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Flight",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:5005/api/flight?passengers=3&origin=DUBLIN&destination=LONDON&dateOut=2021-05-08&dateIn=2021-05-10&roundTrip=true",
+					"host": [
+						"localhost"
+					],
+					"port": "5005",
+					"path": [
+						"api",
+						"flight"
+					],
+					"query": [
+						{
+							"key": "passengers",
+							"value": "3"
+						},
+						{
+							"key": "origin",
+							"value": "DUBLIN"
+						},
+						{
+							"key": "destination",
+							"value": "LONDON"
+						},
+						{
+							"key": "dateOut",
+							"value": "2021-05-08"
+						},
+						{
+							"key": "dateIn",
+							"value": "2021-05-10"
+						},
+						{
+							"key": "roundTrip",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Reservation",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"contact@contact.com\",\r\n  \"creditCard\": \"0123456789012345\",\r\n  \"flights\": [\r\n    {\r\n      \"key\": \"Flight00052\",\r\n      \"passengers\": [\r\n        {\r\n          \"name\": \"Robert Plant\",\r\n          \"bags\": 3,\r\n          \"seat\": \"27\"\r\n        },\r\n        {\r\n          \"name\": \"Ozzy Osbourne\",\r\n          \"bags\": 0,\r\n          \"seat\": \"28\"\r\n        }\r\n      ]\r\n    },\r\n    {\r\n      \"key\": \"Flight00103\",\r\n      \"passengers\": [\r\n        {\r\n          \"name\": \"Robert Plant\",\r\n          \"bags\": 2,\r\n          \"seat\": \"41\"\r\n        },\r\n        {\r\n          \"name\": \"Ozzy Osbourne\",\r\n          \"seat\": \"40\"\r\n        }\r\n      ]\r\n    }\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5005/api/Reservations",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5005",
+					"path": [
+						"api",
+						"Reservations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Reservation",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5005/api/Reservations/DKP258",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5005",
+					"path": [
+						"api",
+						"Reservations",
+						"ABC123"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

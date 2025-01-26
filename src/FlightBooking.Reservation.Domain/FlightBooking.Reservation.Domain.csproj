@@ -1,0 +1,41 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="Class1.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Entities\ReservationAggregate\" />
+    <Folder Include="Interfaces\" />
+    <Folder Include="Specifications\Promotion\" />
+    <Folder Include="Validation\" />
+    <Folder Include="ValueObjects\" />
+    <Folder Include="Constants\" />
+    <Folder Include="Utils\" />
+    <Folder Include="Specifications\Flight\" />
+    <Folder Include="Interfaces\Services\" />
+    <Folder Include="Services\" />
+    <Folder Include="Specifications\Reservation\" />
+    <Folder Include="Resposabilities\" />
+    <Folder Include="Resposabilities\Flight\" />
+    <Folder Include="Resposabilities\Reservation\" />
+    <Folder Include="Resposabilities\Passengers\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Entities\FlightAggregate\Passenger.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="Resources\Language.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Language.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Resources\Language.Designer.cs">
+      <DependentUpon>Language.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+  </ItemGroup>
+</Project>

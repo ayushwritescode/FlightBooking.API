@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Class1.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FlightBooking.Reservation.Domain\FlightBooking.Reservation.Domain.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="InitalStatePromotion.json" />
+    <None Remove="InitialState.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="InitalStatePromotion.json" />
+    <EmbeddedResource Include="InitialState.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
+  </ItemGroup>
+</Project>

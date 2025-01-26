@@ -1,0 +1,18 @@
+[
+  {
+    "flightKey": "Flight00001",
+    "PromoCode": "PROMO40OFF"
+  },
+  {
+    "flightKey": "Flight00052",
+    "PromoCode": "PROMO50OFF"
+  },
+  {
+    "flightKey": "Flight00103",
+    "PromoCode": "PROMO10OFF"
+  },
+  {
+    "flightKey": "Flight10021",
+    "PromoCode": "PROMO110OFF"
+  }
+]

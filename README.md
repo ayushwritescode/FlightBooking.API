@@ -1,39 +1,53 @@
-## Intro
+# FlightBooking Reservation API
 
-The project is built over multiple layers, each with a different reponsibility.
+## About
 
-Presentation/Endpoints layer:
-- Layer responsible for exposing data allowing third parties making calls to the endpoints and GET or POST data.
+This repository demonstrates my expertise in various architectures and design patterns, including:
 
-Mediator layer:
-- Pattern used to make the communication between endpoints and services built on back-end having a cleaner and organized code.
+- **API Design**
+- **Clean Architecture**
+- **Domain-Driven Design (DDD)**
+- **Command Query Responsibility Segregation (CQRS)**
+- **MediatR**
+- **Specifications Pattern**
+- **Repository Pattern**
 
-Domain Layer:
-- Layer responsible for having the models and the services such as Reservation service.
+## Project Structure
 
-Infrastructure layer:
-- Layer responsible for managing the data repositories making available the methods to add, remove or list the data.
-  The Flight and Promotion repositories are seeded whenever you run the application, from JSON files.
+The project is built over multiple layers, each with a different responsibility, following the principles of Clean Architecture:
 
+### Presentation/Endpoints Layer
+- Responsible for exposing data, allowing third parties to make calls to the endpoints and GET or POST data.
+
+### Mediator Layer
+- Utilizes the MediatR pattern to facilitate communication between endpoints and backend services, ensuring cleaner and more organized code.
+
+### Domain Layer
+- Contains the core business logic, including models and services such as the Reservation service, following Domain-Driven Design (DDD) principles.
+
+### Infrastructure Layer
+- Manages data repositories, providing methods to add, remove, or list data. The Flight and Promotion repositories are seeded from JSON files whenever you run the application, implementing the Repository pattern.
+
+### Specifications Pattern
+- Used to encapsulate the logic of querying data, making the code more readable and maintainable.
+
+### CQRS
+- Separates the read and write operations to optimize performance and scalability.
 
 ## API Overview
 
- 1. The API exposes the following operations (see appendixes for further details):
-    * [GET /Flight](AppendixI.md): used to search for available flights on a certain date between two different locations.
-    * [POST /Reservation](AppendixII.md): used to create a reservation in the system
-    * [GET /Reservation](AppendixIII.md): used to retrieve a reservation previously made.
- 2. System constraints:
-    * There is a maximum of 50 bags per flight in total for all the passengers.
-    * Each passenger can have a maximum of 5 bags per flight.
-    * There are 50 seats available per flight, numbered sequentially: “01”, “02”… “50”.
- 3. Every endpoint returns appropriate error messages when the operation cannot be achieved for some reason. 
- 4. For storage, we use in-memory collections to avoid external dependencies. 
- 5. For the initial data state, use the [provided json](InitialState.json/initialStatePromotion.json).
+1. The API exposes the following operations (see appendixes for further details):
+    * [GET /Flight](AppendixI.md): Used to search for available flights on a certain date between two different locations.
+    * [POST /Reservation](AppendixII.md): Used to create a reservation in the system.
+    * [GET /Reservation](AppendixIII.md): Used to retrieve a reservation previously made.
+2. Every endpoint returns appropriate error messages when the operation cannot be achieved for some reason.
+3. For storage, we use in-memory collections to avoid external dependencies.
+4. For the initial data state, use the [provided JSON](InitialState.json/initialStatePromotion.json).
 
+## Swagger UI
 
+You can explore the API using Swagger UI at:
+[http://localhost:5005/swagger/index.html](http://localhost:5005/swagger/index.html)
 
-## Swagger Ui
-
-http://localhost:5005/swagger/index.html
-
+---
 

@@ -13,10 +13,6 @@
     <DotNetCliToolReference Include="dotnet-xunit" Version="2.3.1" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\src\FlightBooking.Reservation\FlightBooking.Reservation.csproj" />
-    <ProjectReference Include="..\..\src\FlightBooking.Reservation.Infrastructure\FlightBooking.Reservation.Infrastructure.csproj" />
-  </ItemGroup>
-  <ItemGroup>
     <Folder Include="Domain\Entities\ReservationAggregate\" />
     <Folder Include="Domain\Services\" />
     <Folder Include="Application\" />
@@ -24,5 +20,9 @@
     <Folder Include="Application\Mediator\Commands\" />
     <Folder Include="Application\Mediator\Queries\" />
     <Folder Include="Application\Mediator\Queries\Flight\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FlightBooking.Reservation.Infrastructure\FlightBooking.Reservation.Infrastructure.csproj" />
+    <ProjectReference Include="..\FlightBooking.Reservation\FlightBooking.Reservation.csproj" />
   </ItemGroup>
 </Project>
